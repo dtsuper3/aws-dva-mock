@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# AWS DVA-C02 Quiz App 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast, and fully responsive practice exam simulator for the **AWS Certified Developer - Associate (DVA-C02)** certification. Built with React, Tailwind CSS v4, Zustand, and Vite.
 
-Currently, two official plugins are available:
+## 🎯 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Full Exam Simulation**: Experience a realistic 65-question mock exam covering all 4 DVA-C02 domains (Development, Security, Deployment, Troubleshooting & Optimization).
+- **Practice Mode**: Learn as you go. Get immediate feedback and detailed explanations with official AWS documentation links for every question.
+- **Detailed Analytics**: View comprehensive results broken down by exam domain to identify your strengths and focus areas.
+- **Save Progress**: Exam state is saved locally. Close the tab and pick up exactly where you left off.
+- **Dark/Light Mode**: First-class support for both dark and light themes, natively integrated with Tailwind CSS v4.
+- **Mobile Responsive**: Study on-the-go with a fully responsive mobile design.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS v4
+- **State Management**: Zustand
+- **Charting**: Recharts
+- **Icons**: Lucide React
+- **Build Tool**: Vite
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v20 or higher recommended)
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/aws-quiz-app.git
+   cd aws-quiz-app
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Start the development server:
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## 📦 Deployment
+
+This project is configured with a GitHub Actions CI/CD pipeline (`.github/workflows/deploy.yml`) to automatically build and deploy the application to **GitHub Pages** whenever changes are pushed to the `main` branch.
+
+To trigger the deployment:
+1. Commit your changes and push to `main`.
+2. The GitHub Action will automatically install dependencies, build the static export, and deploy the application.
+
+## 📚 Exam Domains Covered
+
+1. **Development with AWS Services** (32%)
+2. **Security** (26%)
+3. **Deployment** (24%)
+4. **Troubleshooting and Optimization** (18%)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📝 License
+
+This project is open-source and available under the MIT License.
